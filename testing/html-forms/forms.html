@@ -8,10 +8,17 @@
     <body>
         <main>
             <h1>Login Page</h1>
-            <form action="">
+            <form action="/submit" method="post">
                 <div>
                     <label for="username">Name:</label>
                     <input type="text" id="username" name="username" placeholder="Alexei Eloquez" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="text" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="1234-567-8910">
                 </div>
 
                 <br>
@@ -31,14 +38,21 @@
                 <br>
 
                 <div>
-                    <label for="message">Message</label>
+                    <label for="user-id">User ID:</label>
+                    <input type="text" id="user-id" name="user-id" value="CP222362367" readonly>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="4" cols="50"></textarea>
                 </div>
 
                 <br>
 
                 <div>
-                    <button type="submit" onclick="alert('You have submitted your requirements.')">Submit</button>
+                    <button type="submit" value="Login" onclick="alert('You have submitted your requirements.')">Submit</button> 
                 </div>
 
                 <br>
