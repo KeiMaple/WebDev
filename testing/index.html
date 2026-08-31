@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Testing Styles in HTML</title>
+        <meta name="description" content="This content is for learning styles in HTML.">
+        <style>
+            h1 {
+                text-align: center;
+                color: #fff;
+                background-color: #2F4F4F;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            
+            h2 {
+                text-align: justify;
+                color: #121E1E;
+                font-size: 20px;
+                font-weight: 900;
+                font-family: monospace;
+            }
+
+            .text-recipes {
+                display: inline-block;
+                text-align:left;
+                color: #121E1E;
+                font-size: 15px;
+                font-weight: 900;
+                font-family: monospace;
+                margin-right: 10px;
+            }
+
+            p {
+                text-align: justify;
+                color: #121E1E;
+                font-size: 15px;
+                font-weight: 900;
+                font-family: monospace;
+            }
+            .container-padding {
+                border: 1px solid black;
+                padding: 5%;
+            }
+
+            .recipe-layout {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            #drop-down summary {
+                color: #233b3b; 
+                cursor: pointer; 
+                font-weight: 800;
+            }
+
+        </style>
+        <!-- Do #(name of unique identifier) or .(name of unique identifier) for head section and id(single)/class(multi) attributes for unique reusability of styles -->
+    </head>
+    <body>
+        <main>
+            <div class="container-padding">
+                <h1>Just Trying to Style My Colour</h1>
+                <p>This is an example of using an internal stylesheet with the style element, we can apply consistent styling across the entire page without repeating the code for each element.</p>
+            <br>
+                <details id="drop-down">
+                <summary>Click here to show/hide text</summary>
+                <p>This is a <span style="color: rgb(14, 25, 35);">simple text</span> with some inline styling</p>
+                </details>
+            <br>
+                <button type="button" title="Click me for more information" onclick="alert('hELLO! bLEh')">Click Me</button>
+            </div>
+
+            <br>
+
+            <section>
+                <div class="container-padding">
+                    <h1>Mochi Recipe</h1>
+                    <ul>
+                        <li data-recipe-id="001">
+                            <h2>Green Tea</h2>
+                            <div class="recipe-layout">
+                                <p class="text-recipes">A sweet rice cake stuffed with sweet red bean paste</p>
+                                <button class="save-recipe">Save Recipe</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
