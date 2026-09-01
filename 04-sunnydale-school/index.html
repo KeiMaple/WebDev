@@ -20,6 +20,12 @@
                 font-family: Arial, Helvetica, sans-serif;
             }
 
+            .outdoor {
+                background-color: #AFEEEE;
+                padding: 5px;
+                border: 1px solid #B0E0E6;;
+            }
+
             #mission-statement {
                 color: #32CD32;
             }
@@ -31,6 +37,11 @@
 
             #contact-us {
                 color: #20B2AA;
+            }
+
+            div {
+                background-color: #f8f3f3;
+                padding: 10px;
             }
 
         </style>
@@ -51,14 +62,22 @@
                 <li>
                     Science Fair - <span style="font-weight: bold; font-size: 16px; color: red;">June 10, 2026</span>
                 </li>
+                <li class="outdoor">
+                    Art Exhibition - <span style="font-weight: bold; font-size: 16px; color: red;">July 15, 2026</span>
+                </li>
+                <li class="outdoor">
+                    Sports Day - <span style="font-weight: bold; font-size: 16px; color: red;">August 20, 2026</span>
+                </li>
             </ul>
         </section>
         <section>
-            <h2 id="contact-us">Contact Us</h2>
-            <form>
-                <button type="button" id="email-button" onclick="alert('Thank you for reaching out!')">Email Us</button>
-                <button type="button" id="call-button" onclick="alert('Thank you for reaching out!')">Call Us</button>
-            </form>
+            <div>
+                <h2 id="contact-us">Contact Us</h2>
+                <form>
+                    <button type="button" id="email-button" onclick="alert('Thank you for reaching out!')">Email Us</button>
+                    <button type="button" id="call-button" onclick="alert('Thank you for reaching out!')">Call Us</button>
+                </form>
+            </div>
         </section>
     </body>
 </html>
