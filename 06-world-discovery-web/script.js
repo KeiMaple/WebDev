@@ -1,3 +1,4 @@
+// This is a pre-made code from the course (focus on HTML first)
 document.addEventListener('DOMContentLoaded', function() {
   const continentInfo = {
     'north-america': {
