@@ -18,6 +18,17 @@
     
     <!-- Task 2: Add link to script here -->
     <script src="script.js" defer></script>
+
+    <style>
+        .image-mapper-shape {
+            fill: rgba(0, 0, 0, 0);
+        }
+        g:hover .image-mapper-shape {
+            stroke: white;
+            stroke-width: 2px;
+            opacity: 20%;
+        }
+    </style>
 </head>
 <body>
     <h1>&#x1F5FA; Discover Your World <!-- Task 3: Add an emoji here --></h1>
@@ -26,9 +37,16 @@
     <!-- Task 4: Add a button for displaying geolocation information here -->
     <button id="getLocation">Get Location</button>
 
-    <img src="https://edube.org/uploads/media/default/0001/04/continents.jpg" usemap="#image-map" alt="World Map">
+    <!-- Task 5: Add area tags for continents here -->
+    <img src="continents.jpg" usemap="#image-map" alt="World Map">
+    
     <map name="image-map">
-        <!-- Task 5: Add area tags for continents here -->
+        <area shape="poly" coords="242,287,35,154,21,15,440,19,266,241,301,262" alt="North America" title="North America" href="#">
+        <area shape="poly" coords="381,105,406,204,489,199,521,163,508,127,463,36" alt="Europe" title="Europe" href="#">
+        <area shape="poly" coords="389,209,388,292,475,428,550,393,543,298,492,208" alt="Africa" title="Africa" href="#">
+        <area shape="poly" coords="370,335,278,274,231,302,262,493,288,503,321,450" alt="South America" title="South America" href="#">
+        <area shape="poly" coords="881,26,467,29,525,155,493,201,553,309,794,368,846,396" alt="Asia" title="Asia" href="#">
+        <area shape="poly" coords="856,475,695,431,691,348,857,404" alt="Australia (Oceania)" title="Australia (Oceania)" href="#">
     </map>
 </body>
 </html>
