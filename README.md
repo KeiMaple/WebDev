@@ -2,7 +2,7 @@
  
 Welcome to my web development repository! I am a Computer Science student sharing my growth, practical labs, and projects as I build a rock-solid foundation in full-stack engineering.
  
-I've completed the **HTML Essentials** certification track via **Cisco Networking Academy**, mastering semantic markup, web layout configuration, media components, and native browser Web APIs. I'm now moving into **CSS fundamentals** — learning selectors, the box model, and styling layouts.
+I've completed the **HTML Essentials** certification track via **Cisco Networking Academy**, mastering semantic markup, web layout configuration, media components, and native browser Web APIs. I'm now moving into **CSS Essentials** — learning selectors, the box model, and styling layouts.
  
 ---
  
