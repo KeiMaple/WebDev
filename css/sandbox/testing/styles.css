@@ -1,0 +1,38 @@
+#header {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border: 4px groove pink;
+    border-width: 3px;
+    border-radius: 64px;
+}
+
+body {
+    background-color: rgb(255, 234, 234);
+}
+
+h1,h2 {
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid grey;
+    background-color: darkolivegreen;
+}
+
+p {
+    color: black;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.button {
+    background-color: white;
+    color: black;
+}
+
+selector {
+    property: value;
+    another-property: another-value;
+}  
