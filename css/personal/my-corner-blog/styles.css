@@ -1,0 +1,22 @@
+:root {
+    --peach: #fbdcc8;
+    --peach-light: #fdebdd;
+    --red: #9b2226;
+    --red-soft: #c4514f;
+    --gray: #5f6672;
+    --gray-light: #b9bcc2;
+    --white:#fffaf6;
+
+    --font-display: "Fredoka", "Trebuchet MS", sans-serif;
+    --font-body: "Nunito", "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--peach-light);
+}
