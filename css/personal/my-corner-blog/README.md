@@ -77,7 +77,6 @@ my-corner-blog/
 
 ## Ideas for next steps
 
-- Add a small-phone rule (around `26rem`) that shrinks the strips so two of them fit on very narrow screens without side scrolling
 - Add a navigation menu with jump links to each section (`#about-me`, `#my-hobbies`, `#fun-facts`)
 - Turn "Things I Love" into a styled list, or use the unused `--peach` variable for card-style panels
 - Publish the site for free with GitHub Pages
