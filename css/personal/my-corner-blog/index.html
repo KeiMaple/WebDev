@@ -11,20 +11,32 @@
     </head> 
 
     <body>
-        <header>
-            <h1 style="color: brown; font-size: 24px;">Welcome to my blog</h1>
-            <p>Hi!, I'm Kacey but you can call me Kei! This is my little corner of the internet where I write about myself and the world around me. Grab a snack and stay a while.</p>    
+        <header class="hero">
+            <div class="hero-text">
+                <h1 style="color: brown; font-size: 24px;">Welcome to my blog</h1>
+                <p>Hi!, I'm Kacey but you can call me Kei! This is my little corner of the internet where I write about myself and the world around me. Grab a snack and stay a while.</p>      
+            </div>
+
+            <div class="strips">
+
+                <figure class="strip strip-irl">
+                    <div class="strip-frame">
+                        <img src="images/irl-me-pic.png" alt="Four photobooth pictures of me"> 
+                        <figcaption>IRL me</figcaption> 
+                    </div>
+                </figure>
+
+                <figure class="strip strip-chibi">
+                    <div class="strip-frame">
+                        <image src="images/chibi-me-pic.jpg" alt="Four chibi illustrations of me">
+                        <figcaption>Chbi me</figcaption>
+                    </div>
+                </figure>
+
+            </div>
         </header>
 
-        <main>
-            <section id="my-images">
-                <figure>
-                    <img class="irl-me" src="css\personal\my-corner-blog\images\irl-me-pic.png" alt="A picture of me in real-life">
-                    <img class="chibi-me" src="css\personal\my-corner-blog\images\chibi-me-pic.jpg" alt="A chibi illustration of me">
-                    <figcaption>P.S. comfort and bed is my best frienddd</figcaption>
-                </figure>
-            </section>
-
+        <main>    
             <section id="about-me">
                 <h2>About Me</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias maiores saepe voluptates tempora neque eligendi, quos sint qui vitae corrupti voluptas sit quibusdam culpa exercitationem quam magni ipsa atque nemo?</p>
@@ -41,8 +53,9 @@
             </section>
 
             <footer>
-                <p>Contact: <a href="mailto:" target="_blank">info@myblog.com</a></p>
+                <p>Contact Me: <a href="mailto:" target="_blank">info@myblog.com</a></p>
             </footer>
         </main>
+        
     </body>
 </html>
