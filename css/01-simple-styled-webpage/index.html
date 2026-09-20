@@ -6,6 +6,8 @@
         <meta name="description" content="This is simple webpage styled for a personal blog">    
         <title>My Personal Blog</title>
 
+        <link rel="stylesheet" href="styles.css">
+
         <style>
             p {
                 color: slategray;
@@ -16,16 +18,24 @@
     </head> 
 
     <body>
-        <h1 style="color: blue; font-size: 24px;">Welcome to my blog</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo iure odio doloremque? Architecto iste eveniet magnam atque, voluptates, repudiandae corrupti doloribus tempore harum eos adipisci nisi. Distinctio minima in nostrum!</p>
+        <header>
+            <h1 style="color: blue; font-size: 24px;">Welcome to my Blog</h1>
+        </header>
         
         <main>
             <section id="about-me">
-                <img class="blog-image" src="" alt="">
-                <p></p>
+                <h2>About Me</h2>
+                <p>Hi, I'm a budding web developer learning CSS! I enjoy adding long text to my webpage to demonstrate how the ::first-line pseudo-element works for visitors.</p>
             </section>
 
-
+            <section>
+                <h2>My Interests</h2>
+                <p>I love <span class="highlight">coding</span>, reading, and hiking</p>
+            </section>
         </main>
+
+        <footer>
+            <p>Contact: <a href="mailto:" target="_blank">info@myblog.com</a></p>
+        </footer>
     </body>
 </html>
