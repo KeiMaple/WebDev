@@ -1,15 +1,17 @@
 @font-face {
-    font-family: "Fredoka"; /* name your CSS will use */
-    src: url("fonts/Fredoka.woff2") format(woff2), /* format("truetype" tells the browser what kind of file it is) */
-         url("fonts/Fredoka.ttf") format(truetype);
+    /* name your CSS will use */
+    font-family: "Fredoka"; 
+    /* format("truetype" tells the browser what kind of file it is) */
+    src: url("fonts/Fredoka.woff2") format("woff2"), 
+         url("fonts/Fredoka.ttf") format("truetype");
     font-weight: 300 700;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Nunito";
-    src: url("fonts/Nunito.woff2") format(woff2),
-         url("fonts/Nunito.ttf") format(truetype);
+    src: url("fonts/Nunito.woff2") format("woff2"),
+         url("fonts/Nunito.ttf") format("truetype");
     font-weight: 200 1000;
     font-display: swap;
 }
@@ -149,7 +151,9 @@ a[href^="mailto:"]::after {
     height: 14px;
     margin-left: 5px;
     vertical-align: middle;
-    background: url(images/mail.svg) center / contain no-repeat;
+    background-color: currentColor;
+    -webkit-mask: url("images/mail.svg") center / contain no-repeat;
+    mask: url(images/mail.svg) center / contain no-repeat;
 }
 
 /* applies rules inside only when windows are 52rem or narrower since max-width includes everything narrower */
