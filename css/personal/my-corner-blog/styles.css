@@ -27,7 +27,7 @@ body {
 }
 
 .hero {
-    display: flex;
+    display: flex; /* makes the container flexible, direct children line up in a reponsive row */
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
