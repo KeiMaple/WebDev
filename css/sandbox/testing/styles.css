@@ -1,38 +1,113 @@
-#header {
-    font-size: 24px;
+:root {
+    --peach: #fbdcc8;
+    --peach-light: #fdebdd;
+    --red: #9b2226;
+    --red-soft: #c4514f;
+    --gray: #5f6672;
+    --gray-light: #b9bcc2;
+    --white:#fffaf6;
+
+    --font-display: "Fredoka", "Trebuchet MS", sans-serif;
+    --font-body: "Nunito", "Segoe UI", sans-serif;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 68rem;
+    margin: 0 auto;
+}
+
+.strips {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.strip {
+    width: 10.5rem;
+    margin: 0;
     text-align: center;
-    padding: 20px;
-    border: 4px groove pink;
-    border-width: 3px;
-    border-radius: 64px;
+}
+
+.strip-irl {
+    transform: rotate(-3deg);
+}
+
+.strip-chibi {
+    margin-top: 1.5rem;
+    transform: rotate(2.5deg);
+}
+
+.strip-irl ,.strip-frame img {
+    aspect-ratio: 250 / 716;
+    object-fit: cover;
+    object-position: top;
+}
+
+.strip-chibi ,.strip-frame img {
+    aspect-ratio: 592 / 1678;
+    object-fit: cover;
+    object-position: top;
+}
+
+.strip-frame {
+    background: var(--white);
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.5rem 1.25rem rgba(155, 34, 38, 0.18);
+}
+
+.strip-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#my-images {
+    height: 14px;
+    width: 14px;
 }
 
 body {
-    background-color: rgb(255, 234, 234);
+    padding: 2rem;
+    background-color: var(--peach-light);
+    color: var(--gray);
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.7;
 }
 
-h1,h2 {
-    color: white;
-    font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 24px;
-    text-align: center;
-    border: 1px solid grey;
-    background-color: darkolivegreen;
+a[href^="mailto:"]::after {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    vertical-align: middle;
+    background: url(images/mail.svg) center / contain no-repeat;
 }
 
-p {
-    color: black;
-    font-size: 16px;
-    text-align: justify;
+h1 {
+    margin: 0;
+    color: var(--red);
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.25rem);
+    line-height: 1.1;
 }
 
-.button {
-    background-color: white;
-    color: black;
+h2 {
+    margin: 0 0 0.75rem;
+    color: var(--red);
+    font-family: var(--font-display);
+    font-size: 1.75rem;
 }
 
-selector {
-    property: value;
-    another-property: another-value;
-}  
+figcaption {
+    margin: 0.75rem;
+    color: var(--red);
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+}
