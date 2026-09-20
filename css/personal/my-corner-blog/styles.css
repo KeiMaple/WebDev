@@ -6,8 +6,8 @@
     --gray: #5f6672; /* body text */
     --white: #fffaf6; /* photo frames */
 
-    --font-display: "Fredoka", "Trebuchet MS", sans-serif; /* attention texts */
-    --font-body: "Nunito", "Segoe UI", sans-serif; /* reading texts */
+    --font-display: "Fredoka", "Trebuchet MS", sans-serif; /* attention texts for heading font */
+    --font-body: "Nunito", "Segoe UI", sans-serif; /* reading texts for body font */
 }
 
 body {
@@ -15,15 +15,9 @@ body {
     padding: 2rem; /* 2rem = 32px */
     background-color: var(--peach-light);
     color: var(--gray);
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 6vw, 4.25rem); 
-    /* 
-        clamp(MIN, PREFERRED, MAX) scales the screens dynamically 
-        - 2.5rem = 40px as the smallest the heading is allowed to get.
-        - 6vw is the preferred size. vw means viewport, 1vw = 1% of browser window's width.
-        - On an 800px-wide window, 6vw is 48px. On a phone 400px phone, it's 24px.
-    */ 
-    line-height: 1.1; /* multiplier of the element's own font size. height of each line of text, including the space around it. */
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.7; /* multiplier of the element's own font size. height of each line of text, including the space around it. */
 }
 
 .hero {
@@ -37,7 +31,7 @@ body {
 
 .strips {
     display: flex;
-    align-items: flex-start; /* pins the text block to the left and the strips to the right edge with space in the middle */
+    align-items: flex-start; /* lines the strips up to the top */
     gap: 1.5rem; /* gap between the strips */
 }
 
@@ -66,7 +60,7 @@ body {
 }
 
 .strip-chibi {
-    margin-top: 1.5rem; /* moves the frame strip slightly higher */
+    margin-top: 1.5rem; /* moves the frame strip lower */
     transform: rotate(2.5deg);
 }
 
@@ -75,4 +69,86 @@ figcaption {
     color: var(--red);
     font-family: var(--font-display);
     font-size: 1.1rem;
+}
+
+main {
+    max-width: 68rem;
+    margin: 0  auto;
+    padding-top: 3rem;
+}
+
+main section {
+    max-width: 40rem;
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    margin: 0;
+    color: var(--red);
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.25rem);
+    /* 
+        clamp(MIN, PREFERRED, MAX) scales the screens dynamically 
+        - 2.5rem = 40px as the smallest the heading is allowed to get.
+        - 6vw is the preferred size. vw means viewport, 1vw = 1% of browser window's width.
+        - On an 800px-wide window, 6vw is 48px. On a phone 400px phone, it's 24px.
+    */ 
+    line-height: 1.1;
+}
+
+h2 {
+    margin: 0 0 0.75rem;
+    color: var(--red);
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+}
+
+p {
+    margin: 0 0 1rem;
+    color: var(--gray);
+    
+}
+
+footer {
+    max-width: 68rem;
+    margin: 3rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--red-soft);
+    text-align: center;
+    font-size: 1rem;
+}
+
+a {
+    color: var(--red);
+}
+
+a:hover {
+    color: var(--red-soft);
+}
+
+a[href^="mailto:"]::after {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    vertical-align: middle;
+    background: url(images/mail.svg) center / contain no-repeat;
+}
+
+/* applies rules inside only when windows are 52rem */
+@media (max-width: 52rem) {
+    body {
+        padding: 1rem; /* shrink page's outer padding from 36px to 16px */
+    }
+
+    .hero {
+        flex-direction: column; /* changes main direction from row to column */
+        align-items: flex-start; /* controls are now left and right */
+        gap: 2rem;
+    }
+
+    .strips {
+        align-self: center; /* overrides align items for this child only instead of a container */
+    }
 }
