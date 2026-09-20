@@ -52,3 +52,27 @@ body {
     width: 100%; /* the width follows .strip {} */
     height: auto; /* safeguard, not particularly need to write although it already automatically follows the width */ 
 }
+
+.strip-frame {
+    background: var(--white);
+    padding: 0.6rem; /* border space from the white bg and img */
+    border-radius: 0.6rem; /* rounds corners */
+    box-shadow: 0 0.5rem 1.25rem rgba(155, 34, 38, 0.18);
+    /* offset-x, y, blur, and color */
+}
+
+.strip-irl {
+    transform: rotate(-3deg); 
+}
+
+.strip-chibi {
+    margin-top: 1.5rem; /* moves the frame strip slightly higher */
+    transform: rotate(2.5deg);
+}
+
+figcaption {
+    margin-top: 0.75rem;
+    color: var(--red);
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+}
