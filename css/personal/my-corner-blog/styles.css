@@ -1,8 +1,24 @@
+@font-face {
+    font-family: "Fredoka"; /* name your CSS will use */
+    src: url("fonts/Fredoka.woff2") format(woff2), /* format("truetype" tells the browser what kind of file it is) */
+         url("fonts/Fredoka.ttf") format(truetype);
+    font-weight: 300 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("fonts/Nunito.woff2") format(woff2),
+         url("fonts/Nunito.ttf") format(truetype);
+    font-weight: 200 1000;
+    font-display: swap;
+}
+
 :root {
-    --peach: #fbdcc8; /* panels */
+    --peach: #fbdcc8; /* if to use panels */
     --peach-light: #fdebdd; /* page background */
     --red: #9b2226; /* headings & captions */
-    --red-soft: #c4514f; /* borders and bullet points */
+    --red-soft: #c4514f; /* footer line and link hover */
     --gray: #5f6672; /* body text */
     --white: #fffaf6; /* photo frames */
 
@@ -21,7 +37,7 @@ body {
 }
 
 .hero {
-    display: flex; /* makes the container flexible, direct children line up in a reponsive row */
+    display: flex; /* makes the container flexible, puts children in a row */
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
@@ -88,10 +104,10 @@ h1 {
     font-family: var(--font-display);
     font-size: clamp(2.5rem, 6vw, 4.25rem);
     /* 
-        clamp(MIN, PREFERRED, MAX) scales the screens dynamically 
+        clamp(MIN, PREFERRED, MAX) scales the heading's text size dynamically, scales the heading with the window width 
         - 2.5rem = 40px as the smallest the heading is allowed to get.
         - 6vw is the preferred size. vw means viewport, 1vw = 1% of browser window's width.
-        - On an 800px-wide window, 6vw is 48px. On a phone 400px phone, it's 24px.
+        - On an 800px-wide window, 6vw is 48px. 6vw would be 24px on a 400px phone, but the minimum keeps it at 40px.
     */ 
     line-height: 1.1;
 }
@@ -136,19 +152,20 @@ a[href^="mailto:"]::after {
     background: url(images/mail.svg) center / contain no-repeat;
 }
 
-/* applies rules inside only when windows are 52rem */
+/* applies rules inside only when windows are 52rem or narrower since max-width includes everything narrower */
 @media (max-width: 52rem) {
     body {
-        padding: 1rem; /* shrink page's outer padding from 36px to 16px */
+        padding: 1rem; /* shrink page's outer padding from 32px to 16px */
     }
 
     .hero {
         flex-direction: column; /* changes main direction from row to column */
-        align-items: flex-start; /* controls are now left and right */
+        align-items: flex-start; /* In a column, the controls are now left and right, so flex-start puts items on the left. */
         gap: 2rem;
     }
 
-    .strips {
-        align-self: center; /* overrides align items for this child only instead of a container */
+    /* overrides align items for this child only instead of a container */
+    .strips { 
+        align-self: center;
     }
 }
